@@ -73,3 +73,64 @@ plt.ylabel('Likelihood In Job Posting')
 
 • Both Python and Tableau show relatively stable demand throughout the year with some fluctuations but remain essential skills for data analysts. Power BI, while less demanded compared to the others, shows a slight upward trend towards the year's end.
 
+## 3. How well do jobs and skill pay for data analysis
+
+
+## Salary Analysis for data jobs
+#### Visualize Data
+```python
+sns.boxplot(data = df_mena, x = 'salary_year_avg', y= 'job_title_short', order= job_order)
+sns.set_theme(style= 'ticks')
+plt.title('Salary Distributions in MENA Region')
+plt.xlabel('Average Yearly Salary ($USD)')
+ax = plt.gca()
+ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x,pos:f'${int(x/1000)}K'))
+plt.xlim(0,600000)
+plt.show()
+```
+### Result
+![Salary Distributions](3_Project\Images\Salary_Distributions.png)
+
+### Insights
+- Analysts have the lowest medians, around $85K for Data Analyst and $110K for Senior Data Analyst. Both are below even the plain Data Engineer and Data Scientist medians, which sit around $130K.
+
+- The senior jump is small for engineers and scientists. Data Engineer to Senior Data Engineer is maybe $15-20K, and Data Scientist to Senior Data Scientist looks like roughly the same. Note the boxes overlap heavily, so many base-role postings pay as much as senior ones.
+
+- The analyst track tops out below where the other tracks start. A Senior Data Analyst median (~$110K) is lower than a junior-level Data Engineer or Data Scientist median.
+
+### Highest paid and most demanded for data analysts 
+#### Visualize Data
+``` python
+fig,ax = plt.subplots(2,1)
+sns.set_theme(style = 'ticks')
+sns.barplot(data = top_paying_skills, x ='median', y = 'job_skills', ax = ax[0], hue = 'median', palette = 'dark:b_r')
+
+ax[0].legend().set_visible(False)
+ax[0].set_title('Top 10 Paid Skills for Data Analysts in MENA Region')
+ax[0].set_ylabel('')
+ax[0].set_xlabel('')
+ax[0].set_xlabel('')
+ax[0].set_xlim(0,200000)
+ax[0].xaxis.set_major_formatter(plt.FuncFormatter(lambda x,_ : f'${int(x/1000)}K'))
+
+sns.barplot(data = most_popular_skills, x ='median', y = 'job_skills', ax = ax[1],  palette = 'dark:b_r')
+ax[1].legend().set_visible(False)
+ax[1].set_title('Top 10 In Demand Skills for Data Analysts in MENA Region')
+ax[1].set_ylabel('')
+ax[1].set_xlabel('median salary')
+ax[1].set_xlim(0,200000)
+ax[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x,_ : f'${int(x/1000)}K'))
+
+
+fig.tight_layout()
+plt.show()
+```
+### Result
+![Most_paying_and_most_demanded_skills](3_Project\Images\Most_paying_and_most_demanded_skills.png)
+
+### Insights
+- The top-paying skills are engineering tools, not analyst tools. Atlassian, Unity, Git, Kafka, Scala, Hadoop and PySpark sit at roughly $125K to $190K, which is Data Engineer territory.
+
+- The most requested skills pay the least. Excel, Word, SQL, Power BI and Tableau sit at about $80K to $90K. The two lists barely overlap, so the common skills are the entry ticket and the premium goes to rarer ones.
+
+- Cloud and enterprise skills lead the in-demand list. Azure and Oracle top it at about $100K, while Excel and Word are at the bottom.
