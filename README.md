@@ -134,3 +134,50 @@ plt.show()
 - The most requested skills pay the least. Excel, Word, SQL, Power BI and Tableau sit at about $80K to $90K. The two lists barely overlap, so the common skills are the entry ticket and the premium goes to rarer ones.
 
 - Cloud and enterprise skills lead the in-demand list. Azure and Oracle top it at about $100K, while Excel and Word are at the bottom.
+
+
+## What is the most optimal skill to learn for Data Analysts?
+#### Visualize data
+``` python
+from adjustText import adjust_text
+
+# df_plot.plot(kind = 'scatter', x= 'skills_percentage', y= 'median_salary')
+sns.scatterplot(
+    data = df_plot,
+    x = 'skills_percentage',
+    y = 'median_salary',
+    hue = 'technology'
+)
+
+sns.set_theme(style= 'ticks')
+sns.despine()
+
+texts = []
+
+for i,text in enumerate(df_DA_skills_high_demand.index):
+    texts.append(plt.text(df_DA_skills_high_demand['skills_percentage'].iloc[i], df_DA_skills_high_demand['median_salary'].iloc[i],text))
+
+ax = plt.gca()
+ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y,pos : f'${int(y/1000)}K'))
+ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda y,pos : f'{int(y)}%'))
+
+
+adjust_text(texts, expand=(1.4, 1.8), arrowprops=dict(arrowstyle='->', color='gray'))
+
+plt.xlim(0,60)
+plt.xlabel('skills_percentage')
+plt.ylabel('Median Yearly Salary')
+plt.title(f'Most Optimal Skills for Data Analysts in MENA Region')
+plt.tight_layout()
+plt.figure(figsize=(9,14))
+```
+#### Results
+!['Optimal_skills'](3_Project\Images\Optimal_Skills.png)
+
+
+#### Insights
+- SQL, Excel, and Python are the bulk of the demand. SQL sits alone at the far right, appearing in roughly 56% of postings. Python (about 35%) and Excel (about 40%) follow. Their salaries are middling to decent (SQL and Python around $88K-$92K, Excel around $80K).
+
+- The highest salaries sit on rare skills. Matlab (about $125K), JavaScript, Snowflake, MongoDB, and Linux all cluster at $100K+ but appear in only 5-8% of postings. Few employers ask for them, so the median is based on a small sample. Treat those salary numbers with suspicion; a handful of well-paid jobs can drag a median up a lot.
+
+- The sweet spot is the middle. R (about 22%, $95K) and Tableau (about 30%, $90K) beat Excel on pay while still showing up in a decent share of jobs. Python at $92K with 35% share is the strongest all-rounder: high demand and above-average pay. Power BI is similar in pay to Tableau but appears less often (about 22%).
