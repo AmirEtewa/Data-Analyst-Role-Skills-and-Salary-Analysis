@@ -1,9 +1,13 @@
+# Introduction
+Hello!
+Welcome to 
+
 # The Analysis
 
 ## 1. What are the most demanded skills for the most popular  data roles in MENA region?
 To find the most demanded skills for the top 3 most popular data roles. I filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills I should pay attention to depending on the role I'm targeting.
 
-view my notebook with detailed steps here: [2_Skills_Count.ipynb](3_Project\2_Skills_Count.ipynbb)
+view my notebook with detailed steps here: [2_Skills_Count.ipynb](3_Project\2_Skills_Count.ipynb)
 
 ### Visualize Data
 ```python
@@ -32,7 +36,7 @@ fig.suptitle('Likelihood Skills Requested in Job Postings For MENA Region', font
 plt.show()
 ```
 ### Results
-![Visualization Of The Most Damanded Skills For Top Data Roles In MENA Region](3_Project\Images\Most_Demanded_Skills_Chart.png)
+![Visualization Of The Most Damanded Skills For Top Data Roles In MENA Region](3_Project/Images/Most_Demanded_Skills_Chart.png)
 
 ### Insights
 - Python is a versatile skill, highly demanded across all three roles, but most prominently for Data Scientists (78%) and Data Engineers (63%).
@@ -63,7 +67,7 @@ plt.ylabel('Likelihood In Job Posting')
 
 
 ### Results
-![Trending skills for data analysts in MENA region](3_Project\Images\Skills_Trending.png)
+![Trending skills for data analysts in MENA region](3_Project/Images/Skills_Trending.png)
 
 
 ### Insights
@@ -89,7 +93,7 @@ plt.xlim(0,600000)
 plt.show()
 ```
 ### Result
-![Salary Distributions](3_Project\Images\Salary_Distributions.png)
+![Salary Distributions](3_Project/Images/Salary_Distributions.png)
 
 ### Insights
 - Analysts have the lowest medians, around $85K for Data Analyst and $110K for Senior Data Analyst. Both are below even the plain Data Engineer and Data Scientist medians, which sit around $130K.
@@ -172,7 +176,7 @@ plt.tight_layout()
 plt.figure(figsize=(9,14))
 ```
 #### Results
-!['Optimal_skills'](3_Project\Images\Optimal_Skills.png)
+!['Optimal_skills'](3_Project/Images/Optimal_Skills.png)
 
 
 #### Insights
