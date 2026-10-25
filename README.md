@@ -243,7 +243,8 @@ plt.tight_layout()
 - The highest salaries sit on rarer, engineering-style skills (Kafka, Scala, Hadoop, PySpark), which is closer to Data Engineer territory.
 - Within analyst skills, Python, Tableau and R give the best balance of demand and pay.
 - If I were starting today, I'd learn SQL and Excel first, then Python, then a BI tool such as Power BI or Tableau.
-- Senior Data Analyst pay (~$110K median) sits below the base-level Data Engineer and Data Scientist medians (~$130K). My takeaway is that this pay ceiling is a likely reason analysts move into engineering or science as they gain more experience.
+- Senior Data Analyst pay ($110K median) sits below the base-level Data Engineer and Data Scientist medians ($130K). My takeaway is that this pay ceiling is a likely reason analysts move into engineering or science as they gain more experience.
+
 
 ### From building it
 - Cleaning messy nested data: the skills column was stored as strings that looked like dictionaries, and I had to convert and aggregate them before any analysis was possible.
