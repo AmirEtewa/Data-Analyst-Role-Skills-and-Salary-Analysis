@@ -7,7 +7,7 @@ Welcome to
 ## 1. What are the most demanded skills for the most popular  data roles in MENA region?
 To find the most demanded skills for the top 3 most popular data roles. I filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills I should pay attention to depending on the role I'm targeting.
 
-view my notebook with detailed steps here: [2_Skills_Count.ipynb](3_Project\2_Skills_Count.ipynb)
+view my notebook with detailed steps here: [2_Skills_Count.ipynb](3_Project/2_Skills_Count.ipynb)
 
 ### Visualize Data
 ```python
@@ -130,7 +130,7 @@ fig.tight_layout()
 plt.show()
 ```
 ### Result
-![Most_paying_and_most_demanded_skills](3_Project\Images\Most_paying_and_most_demanded_skills.png)
+![Most_paying_and_most_demanded_skills](3_Project/Images/Most_paying_and_most_demanded_skills.png)
 
 ### Insights
 - The top-paying skills are engineering tools, not analyst tools. Atlassian, Unity, Git, Kafka, Scala, Hadoop and PySpark sit at roughly $125K to $190K, which is Data Engineer territory.
