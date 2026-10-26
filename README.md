@@ -86,7 +86,7 @@ fig.suptitle('Likelihood Skills Requested in Job Postings For MENA Region', font
 plt.show()
 ```
 #### Results
-![Visualization Of The Most Demanded Skills For Top Data Roles In MENA Region](3_Project/Images/Most_Demanded_Skills_Chart.png)
+![Visualization Of The Most Demanded Skills For Top Data Roles In MENA Region](3_Project_Notebooks/Images/Most_Demanded_Skills_Chart.png)
 
 #### Insights
 - Python is a versatile skill, highly demanded across all three roles, but most prominently for Data Scientists (78%) and Data Engineers (63%).
@@ -118,7 +118,7 @@ plt.ylabel('Likelihood In Job Posting')
 
 
 #### Results
-![Trending skills for data analysts in MENA region](3_Project/Images/Skills_Trending.png)
+![Trending skills for data analysts in MENA region](3_Project_Notebooks/Images/Skills_Trending.png)
 
 
 #### Insights
@@ -144,7 +144,7 @@ plt.xlim(0,600000)
 plt.show()
 ```
 #### Result
-![Salary Distributions](3_Project/Images/Salary_Distributions.png)
+![Salary Distributions](3_Project_Notebooks/Images/Salary_Distributions.png)
 
 #### Insights
 - Analysts have the lowest medians, around $85K for Data Analyst and $110K for Senior Data Analyst. Both are below even the plain Data Engineer and Data Scientist medians, which sit around $130K.
@@ -181,7 +181,7 @@ fig.tight_layout()
 plt.show()
 ```
 #### Result
-![Most_paying_and_most_demanded_skills](3_Project/Images/Most_paying_and_most_demanded_skills.png)
+![Most_paying_and_most_demanded_skills](3_Project_Notebooks/Images/Most_paying_and_most_demanded_skills.png)
 
 #### Insights
 - The top-paying skills are engineering tools, not analyst tools. Atlassian, Unity, Git, Kafka, Scala, Hadoop and PySpark sit at roughly $125K to $190K, which is Data Engineer territory.
@@ -227,7 +227,7 @@ plt.title(f'Most Optimal Skills for Data Analysts in MENA Region')
 plt.tight_layout()
 ```
 #### Results
-!['Optimal_skills'](3_Project/Images/Optimal_Skills.png)
+!['Optimal_skills'](3_Project_Notebooks/Images/Optimal_Skills.png)
 
 
 #### Insights
